@@ -1,20 +1,22 @@
 body{
     margin: auto;
+    background-color: rgb(231, 231, 231);
 }
 #container{
+    background-color: white;
     margin: auto;
-    width: 550px;
+    width: 425px;
     font-family: Arial, Helvetica, sans-serif;
     text-align: center;
-    border-radius: 3%;
-    box-shadow: 5px 5px 5px 5px green;
+    border-radius: 1.5%;
+    box-shadow: 4px 4px 8px 8px rgba(0, 187, 0, 0.5);
     margin-top: 2vh;
-    padding-top: 1.5vh;
-    padding-bottom: 1.5vh;
+    padding-top: 1vh;
+    /* padding-bottom: 0.5vh; */
     color: green;
 }
 img{
-    height: 15vh;
+    height: 12vh;
 }
 /* #valasszkepek{
     display: flex;
@@ -27,5 +29,5 @@ img{
     text-shadow: 1px 1px red;
 }
 #eredmeny{
-    font-size: 50px
+    font-size: 40px
 }
