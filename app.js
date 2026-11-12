@@ -1,6 +1,11 @@
 let jatekosPontok = 0
 let gepPontok = 0
 function jatszas(elem) {
+    document.getElementById('ko').style.border = "white solid 0px"
+    document.getElementById('papir').style.border = "white solid 0px"
+    document.getElementById('ollo').style.border = "white solid 0px"
+
+    document.getElementById(elem).style.border = "red solid 3px"
     let rnd = Math.floor(Math.random() * 3);
     console.log(rnd);
     let valasztasok = ["ko", "papir", "ollo"]
