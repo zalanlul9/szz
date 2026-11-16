@@ -70,3 +70,12 @@ gepValasztasKep.src = `./img/${gepValasztas}.png`
     document.getElementById("gepPont").innerHTML = gepPontok
     console.log(`A gép választása: ${gepValasztas},\nA játékos választása: ${elem}, \nAz eredmény: ${eredmeny}, játékos pontszáma: ${jatekosPontok}, a gép pontszáma: ${gepPontok}.`)
 }
+            function ellenorzes()
+            {
+                let x = document.getElementById("nev").value;
+                if (x.length < 8 || x.length > 20) {
+                    document.getElementById("valassz").innerHTML = "A megadott érték nem megfelelő.";
+                } else {
+                    document.getElementById("valassz").innerHTML = "Válassz " + x + "!";
+                }
+            }

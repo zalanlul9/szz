@@ -17,21 +17,7 @@
             <input type="text" id="email" name="email"><br>
             <button type="button" onclick="ellenorzes()">Megadás</button>
         </form>
-        <script>
-            function ellenorzes()
-            {
-                let x = document.getElementById("nev").value();
-                let text;
-                if (x.length < 8 || x.length > 20) {
-                    text = "A megadott érték nem megfelelő.";
-                    document.getElementById("valassz").innerHTML = "A megadott érték nem megfelelő.";
-                } else {
-                    text = x;
-                    document.getElementById("valassz").innerHTML = "Válassz " + text + "!";
-                }
-            }
-        </script>
-        <h2 id="valassz"></h2>
+        <h2 id="valassz">Válassz!</h2>
         <div id="valasszkepek">
             <img id="ko" src="img/ko.png" alt="Kő kép" onclick="jatszas('ko')">
             <img id="papir" src="img/papir.png" alt="Papír kép" onclick="jatszas('papir')">
