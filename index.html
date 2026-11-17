@@ -9,28 +9,31 @@
 <body>
     <div id="container">
 
-        <h1>Kő - papír - olló</h1>
-        <form>
+        <h1 id="h1">Kő - papír - olló</h1>
+        <form id="tuntesd">
             <label for="nev">Név:</label><br>
             <input type="text" id="nev" name="nev"><br>
             <label for="email">Email:</label><br>
             <input type="text" id="email" name="email"><br>
             <button type="button" onclick="ellenorzes()">Megadás</button>
         </form>
-        <h2 id="valassz">Válassz!</h2>
-        <div id="valasszkepek">
-            <img id="ko" src="img/ko.png" alt="Kő kép" onclick="jatszas('ko')">
-            <img id="papir" src="img/papir.png" alt="Papír kép" onclick="jatszas('papir')">
-            <img id="ollo" src="img/ollo.png" alt="Olló kép" onclick="jatszas('ollo')">
+        <div style="display: none;" id="mutasd">
+            <h2 id="valassz">Válassz!</h2>
+            <div id="valasszkepek">
+                <img id="ko" src="img/ko.png" alt="Kő kép" onclick="jatszas('ko')">
+                <img id="papir" src="img/papir.png" alt="Papír kép" onclick="jatszas('papir')">
+                <img id="ollo" src="img/ollo.png" alt="Olló kép" onclick="jatszas('ollo')">
+            </div>
+            <h2>Gép választása</h2>
+                <img src="img/ollo.png" alt="" id="gepValasztasKep">
+            <h1 id="eredmeny">Eredmény: Te nyertél!</h1>
+            <h3 id="felhPont">Te pontod</h3>
+            <h3 class="pontok" id="tePont">0</h3>
+            <h3>Gép pontja</h3>
+            <h3 class="pontok" id="gepPont">0</h3>
+            </div>
         </div>
-        <h2>Gép választása</h2>
-            <img src="img/ollo.png" alt="" id="gepValasztasKep">
-        <h1 id="eredmeny">Eredmény: Te nyertél!</h1>
-        <h3>Te pontod</h3>
-        <h3 class="pontok" id="tePont">0</h3>
-        <h3>Gép pontja</h3>
-        <h3 class="pontok" id="gepPont">0</h3>
-        </div>
+
         <script src="app.js"></script>
 </body>
 </html>
