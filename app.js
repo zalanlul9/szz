@@ -70,6 +70,18 @@ gepValasztasKep.src = `./img/${gepValasztas}.png`
     document.getElementById("tePont").innerHTML = jatekosPontok
     document.getElementById("gepPont").innerHTML = gepPontok
     console.log(`A gép választása: ${gepValasztas},\nA játékos választása: ${elem}, \nAz eredmény: ${eredmeny}, játékos pontszáma: ${jatekosPontok}, a gép pontszáma: ${gepPontok}.`)
+    if (jatekosPontok>=10)
+    {
+        document.getElementById("mutasd").style.display="none";
+        document.getElementById("h2").innerHTML = "A játéknak vége, " + jatekosNev + " nyert!";
+        document.getElementById("ujra").style.display="block";
+    }
+    else if (gepPontok>=10)
+    {
+        document.getElementById("mutasd").style.display="none";
+        document.getElementById("h2").innerHTML = "A játéknak vége, a gép nyert!";
+        document.getElementById("ujra").style.display="block";
+    }
 }
 let hitelesEmail = false;
 let hitelesNev = false;
@@ -93,7 +105,7 @@ function ellenorzes()
                     console.log("nemokes")
                 }
                 if (x.length < 8 || x.length > 20 || vanSzam.test(x)) {
-                    document.getElementById("valassz").innerHTML = "A megadott érték nem megfelelő.";
+                    document.getElementById("h1").innerHTML = "A megadott név nem megfelelő.";
                     document.getElementById("felhPont").innerHTML = "Te pontod";
                     hitelesNev = false;
                     console.log("nemokesNev")
@@ -114,5 +126,15 @@ if (hiteles==true)
 {
     document.getElementById("mutasd").style.display="block";
     document.getElementById("tuntesd").style.display="none";
+    document.getElementById("h1").innerHTML = "Kő - papír - olló";
 }
+}
+function ujra()
+{
+    document.getElementById("mutasd").style.display="block";
+    document.getElementById("tuntesd").style.display="none";
+    document.getElementById("h1").innerHTML = "Kő - papír - olló";
+    document.getElementById("ujra").style.display="none";
+    jatekosPontok=0;
+    gepPontok=0;
 }
