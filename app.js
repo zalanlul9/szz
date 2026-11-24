@@ -74,7 +74,7 @@ gepValasztasKep.src = `./img/${gepValasztas}.png`
 let hitelesEmail = false;
 let hitelesNev = false;
 let vanSzam = /\d/;
-            function ellenorzes()
+function ellenorzes()
             {
                 let x = document.getElementById("nev").value;
                 let y = document.getElementById("email").value;
@@ -104,9 +104,8 @@ let vanSzam = /\d/;
                     hitelesNev = true;
                     console.log("okesNev")
                 }
-            }
 let hiteles = false;
-if (hitelesNev==true && hitelesEmail==true)
+if (hitelesNev && hitelesEmail) 
 {
     hiteles = true;
     console.log("okesHiteles")
@@ -115,4 +114,5 @@ if (hiteles==true)
 {
     document.getElementById("mutasd").style.display="block";
     document.getElementById("tuntesd").style.display="none";
+}
 }
